@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Pendakian</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="background-color: #343a40">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="overlay"></div>
+      <div class="container">
+        <h1>Welcome to Hiking Data</h1>
+        <p>Explore and share your hiking experiences</p>
+      </div>
+    </section>
+
+    <!-- Navigation Buttons -->
+    <div class="container mt-3 d-flex justify-content-center">
+      <button class="btn btn-primary mr-2" id="dataBtn">
+        View Hiking Data
+      </button>
+      <button class="btn btn-primary" id="formBtn">
+        Share Your Experience
+      </button>
+    </div>
+
+    <!-- Hiking Data Section -->
+    <section id="dataSection" class="py-5 bg-dark" style="display: none">
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title mb-4">Hiking Data</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <h3>Jalur Populer</h3>
+                <ul>
+                  <li>Jalur 1 Patak Banteng - Tingkat Kesulitan : Mudah</li>
+                  <li>Jakur 2 Kali Mati - Tingkat Kesulitan : Sedang</li>
+                  <li>Jalur 3 Alas Purwo - Tingkat Kesulitan : Berat</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h3>Persentase jumlah Pendaki/Tahun</h3>
+                <ul>
+                  <li>Jalur 1 - 47%</li>
+                  <li>Jalur 2 - 32%</li>
+                  <li>Jalur 3 - 16%</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section id="formSection" class="py-5 bg-dark" style="display: none">
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title mb-4">Share Your Experience</h2>
+            <form class="custom-form" id="experienceForm">
+              <div class="form-group">
+                <label for="name">Nama:</label>
+                <input type="text" class="form-control" id="name" required />
+              </div>
+              <div class="form-group">
+                <label for="response">Pengalaman Anda:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="response"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label>tingkat Kesulitan :</label><br />
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="difficulty"
+                    id="easy"
+                    value="Easy"
+                  />
+                  <label class="form-check-label" for="easy">easy</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="difficulty"
+                    id="moderate"
+                    value="Moderate"
+                  />
+                  <label class="form-check-label" for="moderate">moderate</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="difficulty"
+                    id="hard"
+                    value="Hard"
+                  />
+                  <label class="form-check-label" for="hard">hard</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="features"> Features :</label><br />
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="scenic"
+                    value="Scenic"
+                  />
+                  <label class="form-check-label" for="scenic">Scenic</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="challenging"
+                    value="Challenging"
+                  />
+                  <label class="form-check-label" for="challenging"
+                    >challenging</label
+                  >
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="wildlife"
+                    value="Wildlife"
+                  />
+                  <label class="form-check-label" for="wildlife"
+                    >wildlife</label
+                  >
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
